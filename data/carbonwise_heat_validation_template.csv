@@ -1,0 +1,6 @@
+heat_id,date,grade,target_tonnage,actual_finished_tonnage,scrap_total_t,scrap_pct,scrap_type,scrap_source,alloy_type,alloy_qty_t,electricity_mwh,energy_mwh_per_t,energy_source,fuel_type,fuel_qty,yield_pct,quality_pass,rework,reject,actual_scope1_co2e,actual_scope2_co2e,actual_total_co2e,actual_co2e_per_t
+CW-VAL-2026-1001,2026-09-01,304,100.0,98.4,71.5,70.1,SS 304 Heavy Scrap,Certified Yard A,FeCr + FeNi,4.2,182.0,1.85,Grid,Natural Gas,12.0,92.4,PASS,0,0,0.36,1.33,2.31,2.31
+CW-VAL-2026-1002,2026-09-02,304,100.0,97.8,74.0,73.5,SS 304 Heavy Scrap,Certified Yard B,FeCr + FeNi,3.9,175.0,1.79,Grid,Natural Gas,11.5,91.9,PASS,0,0,0.38,1.29,2.29,2.29
+CW-VAL-2026-1003,2026-09-03,316,100.0,96.5,70.0,68.5,SS 316 Return Scrap,Certified Yard A,FeCr + FeNi + FeMo,5.8,188.0,1.92,Grid,Natural Gas,13.0,91.2,PASS,0,0,0.35,1.38,2.57,2.57
+CW-VAL-2026-1004,2026-09-04,304L,100.0,98.1,72.0,71.0,SS 304 Low Carbon Scrap,Certified Yard C,FeCr + FeNi,4.0,180.0,1.83,Grid,Natural Gas,12.0,92.2,PASS,0,0,0.37,1.32,2.31,2.31
+CW-VAL-2026-1005,2026-09-05,430,100.0,99.0,76.0,75.0,SS 430 Ferritic Scrap,Certified Yard B,FeCr (Low Ni),3.2,165.0,1.67,Grid,Natural Gas,10.0,94.0,PASS,0,0,0.39,1.20,1.97,1.97

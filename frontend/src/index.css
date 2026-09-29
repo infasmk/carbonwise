@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #0c0e11;
+    --bg-secondary: #121417;
+    --surface: #171a1f;
+    --surface-elevated: #1f232a;
+    --border: #272c35;
+    --border-subtle: #1f232a;
+    --text-primary: #f0f2f5;
+    --text-secondary: #b8c0cc;
+    --text-muted: #647083;
+    --accent: #e8590c;
+  }
+
+  body {
+    background-color: #0c0e11;
+    color: #e1e5eb;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom industrial scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121417;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #272c35;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #48505e;
+}
+
+/* Clean glass / card styling */
+.industrial-card {
+  background-color: #171a1f;
+  border: 1px solid #272c35;
+  border-radius: 0.5rem;
+}
+
+.industrial-card-hover {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.industrial-card-hover:hover {
+  border-color: #3e4653;
+  transform: translateY(-1px);
+}
+
+/* Micro animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Monospace numeric figures */
+.font-tabular {
+  font-variant-numeric: tabular-nums;
+}

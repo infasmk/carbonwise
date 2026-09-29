@@ -1,0 +1,12 @@
+heat_id,date,grade,target_tonnage,actual_finished_tonnage,scrap_total_t,scrap_pct,scrap_type,scrap_source,alloy_type,alloy_qty_t,electricity_mwh,energy_mwh_per_t,energy_source,fuel_type,fuel_qty,yield_pct,quality_pass,rework,reject,actual_scope1_co2e,actual_scope2_co2e,actual_total_co2e,actual_co2e_per_t
+CW-VAL-2026-1010,2026-09-01,304,100.0,98.2,71.0,70.1,SS 304 Heavy,Certified Yard A,FeCr+FeNi,4.2,185.0,1.85,Grid,Natural Gas,12.0,92.4,PASS,0,0,0.36,1.33,2.31,2.31
+CW-VAL-2026-1011,2026-09-01,304,100.0,97.9,73.0,72.5,SS 304 Heavy,Certified Yard B,FeCr+FeNi,4.0,181.0,1.81,Grid,Natural Gas,11.8,92.0,PASS,0,0,0.37,1.30,2.29,2.29
+CW-VAL-2026-1012,2026-09-02,316,100.0,96.8,69.5,68.0,SS 316 Return,Certified Yard A,FeCr+FeNi+Mo,5.9,190.0,1.90,Grid,Natural Gas,13.0,91.5,PASS,0,0,0.35,1.37,2.56,2.56
+CW-VAL-2026-1013,2026-09-02,304,100.0,98.5,74.5,74.0,SS 304 Heavy,Certified Yard A,FeCr+FeNi,3.8,177.0,1.77,Grid,Natural Gas,11.5,92.6,PASS,0,0,0.38,1.27,2.27,2.27
+CW-VAL-2026-1014,2026-09-03,430,100.0,99.1,75.0,74.5,SS 430 Return,Certified Yard C,FeCr,3.1,168.0,1.68,Grid,Natural Gas,10.5,93.8,PASS,0,0,0.38,1.21,1.97,1.97
+CW-VAL-2026-1015,2026-09-03,304L,100.0,98.0,71.5,70.5,SS 304 Low C,Certified Yard B,FeCr+FeNi,4.1,184.0,1.84,Grid,Natural Gas,12.0,92.2,PASS,0,0,0.36,1.32,2.30,2.30
+CW-VAL-2026-1016,2026-09-04,304,100.0,97.5,76.0,75.5,SS 304 Heavy,Certified Yard A,FeCr+FeNi,3.7,175.0,1.75,Grid,Natural Gas,11.2,91.8,PASS,0,0,0.39,1.26,2.27,2.27
+CW-VAL-2026-1017,2026-09-04,316L,100.0,96.4,68.0,67.5,SS 316 Low C,Certified Yard A,FeCr+FeNi+Mo,6.0,192.0,1.92,Grid,Natural Gas,13.2,91.0,PASS,0,0,0.35,1.38,2.57,2.57
+CW-VAL-2026-1018,2026-09-05,304,100.0,98.1,72.5,72.0,SS 304 Heavy,Certified Yard B,FeCr+FeNi,4.0,180.0,1.80,Grid,Natural Gas,11.7,92.3,PASS,0,0,0.37,1.29,2.28,2.28
+CW-VAL-2026-1019,2026-09-05,304,100.0,97.8,70.5,70.0,SS 304 Heavy,Certified Yard C,FeCr+FeNi,4.3,186.0,1.86,Grid,Natural Gas,12.1,92.1,PASS,0,0,0.36,1.34,2.32,2.32
+CW-VAL-2026-1020,2026-09-06,430,100.0,99.0,76.5,76.0,SS 430 Return,Certified Yard A,FeCr,3.0,166.0,1.66,Grid,Natural Gas,10.2,94.1,PASS,0,0,0.39,1.19,1.96,1.96

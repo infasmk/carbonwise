@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+*.db
+*.sqlite3
+
+# Node / Frontend
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+dist-ssr/
+*.local
+.npm
+.eslintcache
+
+# Environment & Secrets
+.env
+.env.*.local
+
+# Confidential Datasets
+/data/confidential/
+*.secret.csv
+*.internal.xlsx
+
+# OS
+.DS_Store
+Thumbs.db
