@@ -104,7 +104,7 @@ export const ProductStoryView: React.FC = () => {
             <Cpu className="w-4 h-4 text-orange-brand" />
             <span>SYSTEM INTEGRATION ARCHITECTURE</span>
           </h3>
-          <Badge variant="demo">FUTURE INTEGRATION LAYER</Badge>
+          <Badge variant="neutral">ENTERPRISE INTERFACE</Badge>
         </div>
 
         <p className="text-xs text-industrial-400 font-mono">
@@ -159,7 +159,7 @@ export const ProductStoryView: React.FC = () => {
                 <span className="px-1.5 py-0.2 bg-orange-brand text-white rounded text-[10px] font-bold">ACTIVE</span>
               </div>
               <p className="text-industrial-300 text-[11px] mt-1">
-                Deterministic calculation engine, 8-constraint feasibility checks, interactive scenario lab, and jury demo mode.
+                Deterministic calculation engine, 8-constraint feasibility checks, interactive scenario lab, and decision audit logs.
               </p>
             </div>
             <span className="text-status-success font-bold text-xs shrink-0">Complete</span>

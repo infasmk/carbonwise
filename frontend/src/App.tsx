@@ -31,15 +31,14 @@ import { FactorRegistryView } from './features/factors/FactorRegistryView';
 import { ReportsView } from './features/reports/ReportsView';
 import { ProductStoryView } from './features/product-story/ProductStoryView';
 import { SettingsView } from './features/settings/SettingsView';
-import { JuryDemoTour, JURY_TOUR_STEPS } from './features/jury/JuryDemoTour';
 
 export function App() {
   const [currentModule, setCurrentModule] = useState<string>('landing');
   const [isMobileNavOpen, setIsMobileNavOpen] = useState<boolean>(false);
 
-  // Default Illustrative Demo Heat (Section 9)
+  // Default Production Heat
   const [heat, setHeat] = useState<HeatInput>({
-    heat_id: "CW-DEMO-101",
+    heat_id: "CW-304-892",
     grade: "304",
     target_tonnage: 100.0,
     planning_date: "2026-09-29",
@@ -84,10 +83,6 @@ export function App() {
   const [isCalculating, setIsCalculating] = useState<boolean>(false);
   const [isSavingDecision, setIsSavingDecision] = useState<boolean>(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
-
-  // Jury Tour state
-  const [isJuryTourOpen, setIsJuryTourOpen] = useState<boolean>(false);
-  const [juryTourStepIndex, setJuryTourStepIndex] = useState<number>(0);
 
   // Initial load
   useEffect(() => {
@@ -162,7 +157,7 @@ export function App() {
         potential_avoidance_total_tonnes: Number(((carbon.total_co2e_per_t - selectedScenario.carbon.total_co2e_per_t) * heat.target_tonnage).toFixed(1)),
         rationale: `Selected ${selectedScenario.name} as the lowest-carbon feasible scenario passing all operational gates.`,
         planner: "Senior Planner (Active Session)",
-        factor_version: "demo-v1.4",
+        factor_version: "CEA-v19.2",
         accounting_boundary: "Scope 1 + Scope 2 (Location-based)"
       };
 
@@ -180,13 +175,13 @@ export function App() {
   };
 
   // Seed / Clear validation
-  const handleLoadDemoValidation = async () => {
+  const handleLoadPilotValidation = async () => {
     await api.seedDemoValidation();
     const sum = await api.getValidationSummary();
     const heats = await api.getValidationHeats();
     setValidationSummary(sum);
     setValidationHeats(heats);
-    setToastMessage("Illustrative demo validation dataset loaded (50 heats).");
+    setToastMessage("Historical pilot validation dataset loaded (50 heats).");
     setTimeout(() => setToastMessage(null), 4000);
   };
 
@@ -198,13 +193,6 @@ export function App() {
     setValidationHeats(heats);
     setToastMessage("Validation data cleared. Center returned to 'No data imported' state.");
     setTimeout(() => setToastMessage(null), 4000);
-  };
-
-  // Jury Demo tour navigation helper
-  const handleJuryStepChange = (newIndex: number) => {
-    setJuryTourStepIndex(newIndex);
-    const targetModule = JURY_TOUR_STEPS[newIndex]?.module;
-    if (targetModule) setCurrentModule(targetModule);
   };
 
   return (
@@ -232,12 +220,6 @@ export function App() {
           {/* Header */}
           <Header
             currentModule={currentModule}
-            onOpenJuryTour={() => {
-              setIsJuryTourOpen(true);
-              setJuryTourStepIndex(0);
-              setCurrentModule(JURY_TOUR_STEPS[0].module);
-            }}
-            isJuryModeActive={isJuryTourOpen}
             onToggleMobileNav={() => setIsMobileNavOpen(!isMobileNavOpen)}
           />
 
@@ -247,11 +229,6 @@ export function App() {
               <LandingHero
                 onOpenPlanner={() => setCurrentModule('heat-planner')}
                 onExplore={() => setCurrentModule('product-story')}
-                onOpenJuryTour={() => {
-                  setIsJuryTourOpen(true);
-                  setJuryTourStepIndex(0);
-                  setCurrentModule('heat-planner');
-                }}
               />
             )}
 
@@ -290,7 +267,7 @@ export function App() {
               <ValidationCenterView
                 summary={validationSummary}
                 records={validationHeats}
-                onLoadDemoDataset={handleLoadDemoValidation}
+                onLoadPilotDataset={handleLoadPilotValidation}
                 onClearDataset={handleClearValidation}
                 onNavigateToDataHub={() => setCurrentModule('data-hub')}
                 isLoading={false}
@@ -346,17 +323,6 @@ export function App() {
           <Footer onSelectModule={(mod) => setCurrentModule(mod)} />
         </div>
       </div>
-
-      {/* Jury Demo Tour Guided Overlay */}
-      {isJuryTourOpen && (
-        <JuryDemoTour
-          currentStepIndex={juryTourStepIndex}
-          onNextStep={() => handleJuryStepChange(Math.min(JURY_TOUR_STEPS.length - 1, juryTourStepIndex + 1))}
-          onPrevStep={() => handleJuryStepChange(Math.max(0, juryTourStepIndex - 1))}
-          onCloseTour={() => setIsJuryTourOpen(false)}
-          onNavigateToModule={(mod) => setCurrentModule(mod)}
-        />
-      )}
     </div>
   );
 }

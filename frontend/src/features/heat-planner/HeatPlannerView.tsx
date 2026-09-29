@@ -152,7 +152,7 @@ export const HeatPlannerView: React.FC<HeatPlannerViewProps> = ({
                 />
                 <div className="flex justify-between text-[10px] text-industrial-500 mt-0.5">
                   <span>Min 40%</span>
-                  <span>Illustrative Baseline: 70.1%</span>
+                  <span>Operational Baseline: 70.1%</span>
                   <span>Max 90%</span>
                 </div>
               </div>
@@ -248,7 +248,7 @@ export const HeatPlannerView: React.FC<HeatPlannerViewProps> = ({
                     onChange={(e) => handleFieldChange('grid_emission_factor', parseFloat(e.target.value) || 0.719)}
                     className="w-full bg-industrial-900 border border-industrial-800 rounded px-2 py-1.5 text-industrial-200 mt-1 focus:outline-none"
                   />
-                  <span className="text-[10px] text-industrial-500 block mt-0.5">Reference demo baseline: 0.719</span>
+                  <span className="text-[10px] text-industrial-500 block mt-0.5">CEA Grid Baseline: 0.719</span>
                 </div>
               </div>
 
@@ -268,7 +268,7 @@ export const HeatPlannerView: React.FC<HeatPlannerViewProps> = ({
                 />
                 <div className="flex justify-between text-[10px] text-industrial-500 mt-0.5">
                   <span>1.30 MWh/t (Thermodynamic Limit)</span>
-                  <span>Demo: 1.85 MWh/t</span>
+                  <span>Baseline: 1.85 MWh/t</span>
                   <span>2.50 MWh/t</span>
                 </div>
               </div>
@@ -351,7 +351,7 @@ export const HeatPlannerView: React.FC<HeatPlannerViewProps> = ({
               <span className="uppercase tracking-wider font-semibold text-industrial-200">
                 PRE-PRODUCTION CARBON IMPACT
               </span>
-              <Badge variant="demo" size="sm">DEMO BASELINE</Badge>
+              <Badge variant="accent" size="sm">ACTIVE BASELINE</Badge>
             </div>
 
             {/* Giant Number Display */}

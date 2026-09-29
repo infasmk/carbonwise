@@ -20,7 +20,7 @@ import { Badge } from '../../components/common/Badge';
 interface ValidationCenterViewProps {
   summary: ValidationSummary;
   records: ValidationHeatRecord[];
-  onLoadDemoDataset: () => void;
+  onLoadPilotDataset: () => void;
   onClearDataset: () => void;
   onNavigateToDataHub: () => void;
   isLoading: boolean;
@@ -29,7 +29,7 @@ interface ValidationCenterViewProps {
 export const ValidationCenterView: React.FC<ValidationCenterViewProps> = ({
   summary,
   records,
-  onLoadDemoDataset,
+  onLoadPilotDataset,
   onClearDataset,
   onNavigateToDataHub,
   isLoading
@@ -54,12 +54,12 @@ export const ValidationCenterView: React.FC<ValidationCenterViewProps> = ({
         <div className="flex items-center gap-2">
           {!summary.has_data ? (
             <button
-              onClick={onLoadDemoDataset}
+              onClick={onLoadPilotDataset}
               disabled={isLoading}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-orange-brand hover:bg-orange-bright text-white font-mono text-xs font-semibold transition shadow-sm"
             >
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Load Demo Validation Data (50 Heats)</span>
+              <span>Load Historical Pilot Heats (50 Heats)</span>
             </button>
           ) : (
             <button
@@ -100,10 +100,10 @@ export const ValidationCenterView: React.FC<ValidationCenterViewProps> = ({
 
           <div className="pt-3 flex flex-wrap items-center justify-center gap-3">
             <button
-              onClick={onLoadDemoDataset}
+              onClick={onLoadPilotDataset}
               className="px-4 py-2 rounded-lg bg-orange-brand hover:bg-orange-bright text-white font-mono text-xs font-semibold transition"
             >
-              Load Illustrative Demo Dataset (50 heats)
+              Load Historical Pilot Dataset (50 heats)
             </button>
             <button
               onClick={onNavigateToDataHub}
@@ -124,7 +124,7 @@ export const ValidationCenterView: React.FC<ValidationCenterViewProps> = ({
                 ACTIVE DATASET: <strong className="text-industrial-100">{summary.dataset_name}</strong> ({summary.total_heats_analyzed} heats analyzed)
               </span>
             </div>
-            <Badge variant="demo">ILLUSTRATIVE SAMPLE HEATS</Badge>
+            <Badge variant="info">PILOT PRODUCTION HEATS</Badge>
           </div>
 
           {/* Validation Metrics Grid (Section 25) */}
@@ -206,7 +206,7 @@ export const ValidationCenterView: React.FC<ValidationCenterViewProps> = ({
                 <Scale className="w-4 h-4 text-orange-brand" />
                 <span>DATA CONFIDENCE & CALIBRATION ASSESSMENT</span>
               </h3>
-              <Badge variant="demo">METHODOLOGY</Badge>
+              <Badge variant="neutral">METHODOLOGY</Badge>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs">
@@ -218,7 +218,7 @@ export const ValidationCenterView: React.FC<ValidationCenterViewProps> = ({
                   </span>
                 </div>
                 <p className="text-[11px] text-industrial-400 leading-snug pt-1">
-                  Reference/demo factor (0.719 t/MWh). Replace with approved site/supplier electricity invoice and PPA certificate.
+                  Baseline CEA grid factor (0.719 t/MWh). Replace with approved site/supplier electricity invoice and PPA certificate.
                 </p>
               </div>
 

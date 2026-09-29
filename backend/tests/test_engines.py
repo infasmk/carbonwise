@@ -16,7 +16,7 @@ def test_carbon_calculation_demo_values():
     Total: ~2.31 tCO2e/t
     """
     heat = HeatInput(
-        heat_id="CW-DEMO-TEST",
+        heat_id="CW-304-TEST",
         grade="304",
         target_tonnage=100.0,
         scrap_mix_pct=70.1,
@@ -30,7 +30,7 @@ def test_carbon_calculation_demo_values():
     assert round(result.alloy_co2e_per_t, 2) == 0.62
     assert round(result.scrap_route_co2e_per_t, 2) == 0.36
     assert round(result.total_co2e_per_t, 2) == 2.31
-    assert "Illustrative calculation basis" in result.methodology_note
+    assert "calculation basis" in result.methodology_note
     assert len(result.calculation_steps) == 3
 
 def test_feasibility_engine_yield_rejection():

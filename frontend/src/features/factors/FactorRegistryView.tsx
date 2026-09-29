@@ -147,7 +147,7 @@ export const FactorRegistryView: React.FC<FactorRegistryViewProps> = ({
                           variant={
                             f.status === 'APPROVED' ? 'success' :
                             f.status === 'REFERENCE' ? 'info' :
-                            f.status === 'PENDING VALIDATION' ? 'warning' : 'demo'
+                            f.status === 'PENDING VALIDATION' ? 'warning' : 'neutral'
                           }
                           size="sm"
                         >
@@ -213,7 +213,7 @@ export const FactorRegistryView: React.FC<FactorRegistryViewProps> = ({
               <div key={i} className="industrial-card p-4 border border-industrial-800 rounded-lg space-y-2 font-mono text-xs">
                 <div className="flex items-center justify-between pb-2 border-b border-industrial-800">
                   <span className="text-industrial-100 font-bold">{pc.parameter}</span>
-                  <Badge variant="demo" size="sm">{pc.source}</Badge>
+                  <Badge variant="neutral" size="sm">{pc.source}</Badge>
                 </div>
                 <div className="flex justify-between text-industrial-300">
                   <span className="text-industrial-500">Operating Unit:</span>

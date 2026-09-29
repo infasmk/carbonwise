@@ -1,6 +1,6 @@
-# CARBONWISE 3-MINUTE JURY DEMONSTRATION GUIDE
+# CARBONWISE 3-MINUTE EXECUTIVE WALKTHROUGH GUIDE
 
-Follow this structured script when presenting CarbonWise to industrial juries, Jindal Stainless reviewers, hackathon panels, or sustainability teams.
+Follow this structured script when demonstrating CarbonWise to plant leadership, Jindal Stainless reviewers, engineering panels, or sustainability teams.
 
 ---
 

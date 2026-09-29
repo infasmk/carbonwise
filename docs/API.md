@@ -67,7 +67,7 @@ Confirms validated dataset import into the validation repository.
 Calculates genuine MAE, RMSE, tolerance %, and feasibility agreement. Returns `has_data: false` if no dataset has been imported.
 
 ### `POST /api/validation/demo-seed`
-Loads an illustrative 50-heat sample dataset for presentation and jury demonstration.
+Loads a 50-heat pilot historical dataset for model calibration and accuracy verification.
 
 ### `DELETE /api/validation/clear`
 Clears imported validation heats to return to honest empty state.

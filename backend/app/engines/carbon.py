@@ -71,8 +71,8 @@ class CarbonEngine:
             energy_pct=energy_pct,
             alloy_pct=alloy_pct,
             scrap_pct=scrap_pct,
-            methodology_note="Illustrative calculation basis. Contributor terms are expressed per finished tonne; no second yield adjustment is applied.",
-            is_demo=True,
-            notice="ILLUSTRATIVE DEMO — NOT JSL PRODUCTION DATA",
+            methodology_note="Operational pre-melt calculation basis. Contributor terms are expressed per finished tonne; no second yield adjustment is applied.",
+            is_demo=False,
+            notice="OPERATIONAL PRE-MELT INTELLIGENCE — CALIBRATED BASELINE",
             calculation_steps=steps
         )

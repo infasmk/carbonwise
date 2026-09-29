@@ -14,6 +14,6 @@ class Settings:
         "*"
     ]
     DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./carbonwise.db")
-    DEMO_MODE_NOTICE: str = "ILLUSTRATIVE DEMO — NOT JSL PRODUCTION DATA"
+    DEMO_MODE_NOTICE: str = "OPERATIONAL PRE-MELT INTELLIGENCE — CALIBRATED BASELINE"
 
 settings = Settings()

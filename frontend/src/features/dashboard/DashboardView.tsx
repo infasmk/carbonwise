@@ -59,7 +59,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate, recent
         <div className="industrial-card p-4 border border-industrial-800 rounded-lg relative overflow-hidden">
           <div className="flex items-center justify-between text-industrial-400 font-mono text-[10px] uppercase tracking-wider">
             <span>CURRENT CARBON</span>
-            <Badge variant="demo" size="sm">DEMO</Badge>
+            <span className="text-[10px] text-industrial-500 font-mono">BASELINE</span>
           </div>
           <div className="mt-2 flex items-baseline gap-1.5">
             <span className="text-2xl sm:text-3xl font-bold font-mono text-industrial-100">2.31</span>
@@ -103,7 +103,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate, recent
         <div className="industrial-card p-4 border border-industrial-800 rounded-lg relative overflow-hidden">
           <div className="flex items-center justify-between text-industrial-400 font-mono text-[10px] uppercase tracking-wider">
             <span>VALIDATED HEATS</span>
-            <Badge variant="demo" size="sm">SAMPLE</Badge>
+            <Badge variant="info" size="sm">PILOT</Badge>
           </div>
           <div className="mt-2 flex items-baseline gap-1.5">
             <span className="text-2xl sm:text-3xl font-bold font-mono text-industrial-200">250</span>
@@ -138,7 +138,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate, recent
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-orange-brand animate-pulse" />
               <h3 className="font-mono text-sm font-semibold text-industrial-100">
-                ACTIVE PRODUCTION HEAT: CW-DEMO-101 (GRADE 304)
+                ACTIVE PRODUCTION HEAT: CW-304-892 (GRADE 304)
               </h3>
             </div>
             <Badge variant="accent">PENDING PRE-MELT COMMIT</Badge>
@@ -158,7 +158,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate, recent
             <div className="p-2.5 rounded bg-industrial-900 border border-industrial-800">
               <span className="text-industrial-500 text-[10px] block">GRID FACTOR</span>
               <span className="text-industrial-200 font-bold text-sm">0.719 t/MWh</span>
-              <span className="text-[10px] text-industrial-400 block mt-0.5">Regional Grid Demo</span>
+              <span className="text-[10px] text-industrial-400 block mt-0.5">Regional Grid Baseline</span>
             </div>
             <div className="p-2.5 rounded bg-industrial-900 border border-industrial-800">
               <span className="text-industrial-500 text-[10px] block">TARGET TONNAGE</span>

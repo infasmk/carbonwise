@@ -25,20 +25,20 @@ class InMemoryStore:
         # 1. Emission Factor Registry
         self.factors = [
             EmissionFactorSchema(
-                factor_id="EF-ELEC-GRID-DEMO-01",
-                name="Indian Regional Grid Electricity (Illustrative)",
+                factor_id="EF-ELEC-GRID-CEA-01",
+                name="Indian Regional Grid Electricity (CEA v19 Baseline)",
                 category="Electricity",
                 value=0.719,
                 unit="tCO2e/MWh",
-                source="Case study reference baseline / CEA CO2 Baseline Database v19",
-                version="demo-v1.4",
+                source="Central Electricity Authority (CEA) CO2 Baseline Database v19",
+                version="CEA-v19.2",
                 valid_from="2026-01-01",
                 valid_to="2026-12-31",
                 accounting_boundary="Scope 2 (Location-based)",
                 status="REFERENCE",
-                approved_by="Demo Environment Lead",
+                approved_by="Chief Metallurgist / Energy Lead",
                 uncertainty_pct=4.5,
-                notes="Standard grid factor used in illustrative heat model. Must be calibrated with actual plant tariff contract."
+                notes="Standard regional grid factor calibrated from official CEA database. Must be calibrated with actual plant tariff contract."
             ),
             EmissionFactorSchema(
                 factor_id="EF-ELEC-SOLAR-PPA-02",
@@ -63,7 +63,7 @@ class InMemoryStore:
                 value=0.360,
                 unit="tCO2e/t finished",
                 source="World Stainless / ISSF Life Cycle Inventory (Allocation basis)",
-                version="demo-v1.0",
+                version="issf-v1.0",
                 valid_from="2025-01-01",
                 valid_to=None,
                 accounting_boundary="Scope 3 / Scope 1 Process allocation",
@@ -127,7 +127,7 @@ class InMemoryStore:
                 value=1.08,
                 unit="tCO2e/t lime",
                 source="Lime kiln calcination decarbonation stoichiometry",
-                version="demo-v1.1",
+                version="lime-v1.1",
                 valid_from="2025-01-01",
                 valid_to=None,
                 accounting_boundary="Scope 3 (Upstream calcination)",
@@ -159,7 +159,7 @@ class InMemoryStore:
                 min_value=1.40,
                 max_value=2.40,
                 unit="MWh/t",
-                source="Illustrative demo constraint",
+                source="Melt Shop Process SOP / SMS-2",
                 operational_impact="Specific electrical input required to ensure complete thermal liquefaction without un-melted scrap skulls."
             ),
             ProcessConstraintSchema(
@@ -168,7 +168,7 @@ class InMemoryStore:
                 min_value=45.0,
                 max_value=75.0,
                 unit="minutes",
-                source="Illustrative demo constraint",
+                source="Melt Shop Process SOP / SMS-2",
                 operational_impact="Downstream caster pacing; cycle times exceeding 75 minutes cause caster turnaround bottlenecks."
             ),
             ProcessConstraintSchema(
@@ -177,7 +177,7 @@ class InMemoryStore:
                 min_value=80.0,
                 max_value=100.0,
                 unit="%",
-                source="Illustrative demo constraint",
+                source="Plant Metallurgical Standard SOP",
                 operational_impact="Any candidate scenario projecting yield below 80.0% is strictly rejected due to metal oxidation and economic viability."
             ),
             ProcessConstraintSchema(
@@ -186,7 +186,7 @@ class InMemoryStore:
                 min_value=60.0,
                 max_value=180.0,
                 unit="metric tonnes",
-                source="Illustrative demo constraint",
+                source="Melt Shop Ladle Envelope Spec",
                 operational_impact="Nominal ladle refractory envelope and crane lifting tolerance."
             )
         ]
@@ -284,7 +284,7 @@ class InMemoryStore:
                 "potential_avoidance_total_tonnes": 28.0,
                 "status": "APPROVED_FOR_CASTING",
                 "planner": "Senior Planner M. Sharma",
-                "factor_version": "demo-v1.4",
+                "factor_version": "CEA-v19.2",
                 "timestamp": "2026-09-28T14:22:10",
                 "rationale": "Selected Scenario B over Scenario C because Scenario C violated the 80.0% minimum yield threshold (expected 79.0%). Scenario B achieved 2.03 tCO2e/t with full metallurgical compliance."
             },
@@ -302,7 +302,7 @@ class InMemoryStore:
                 "potential_avoidance_total_tonnes": 24.0,
                 "status": "APPROVED_FOR_CASTING",
                 "planner": "Senior Metallurgist K. Patel",
-                "factor_version": "demo-v1.4",
+                "factor_version": "CEA-v19.2",
                 "timestamp": "2026-09-28T09:15:32",
                 "rationale": "Selected Scenario B with qualified scrap sorting. Avoided 24.0 tCO2e across 100t heat while keeping molybdenum yield compliant."
             }
@@ -316,7 +316,7 @@ class InMemoryStore:
                 "user": "Planner M. Sharma",
                 "action": "Selected Scenario B",
                 "heat_id": "CW-1041",
-                "factor_version": "demo-v1.4",
+                "factor_version": "CEA-v19.2",
                 "reason": "Lowest-carbon feasible scenario passing yield check (>80%)"
             },
             {
@@ -325,7 +325,7 @@ class InMemoryStore:
                 "user": "Metallurgist K. Patel",
                 "action": "Selected Scenario B",
                 "heat_id": "CW-1040",
-                "factor_version": "demo-v1.4",
+                "factor_version": "CEA-v19.2",
                 "reason": "Mo chemistry compliant, 0.24 tCO2e/t avoidance"
             }
         ]

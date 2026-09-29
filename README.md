@@ -116,5 +116,5 @@ CarbonWise strictly adheres to enterprise data integrity:
 - [Model Metrology & Validation](docs/VALIDATION.md)
 - [Data Hub & Ingestion Pipeline](docs/DATA_IMPORT.md)
 - [Enterprise Security & Roles](docs/SECURITY.md)
-- [Jury Demonstration Guide](docs/JURY_DEMO.md)
+- [Operational Walkthrough Guide](docs/OPERATIONAL_WALKTHROUGH.md)
 - [Metallurgical Calculation Methodology](docs/METHODOLOGY.md)

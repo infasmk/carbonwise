@@ -27,7 +27,7 @@ export const BenchmarkDashboardView: React.FC<BenchmarkDashboardViewProps> = ({ 
             <h2 className="text-xl sm:text-2xl font-bold text-industrial-100 font-sans tracking-tight">
               JSL Benchmark &amp; Reference Dashboard
             </h2>
-            <Badge variant="demo">PUBLIC DISCLOSURES ONLY</Badge>
+            <Badge variant="info">PUBLIC DISCLOSURES</Badge>
           </div>
           <p className="text-xs sm:text-sm text-industrial-400 mt-0.5">
             Public sustainability disclosures and corporate Net-Zero transition benchmarks published by Jindal Stainless Limited.

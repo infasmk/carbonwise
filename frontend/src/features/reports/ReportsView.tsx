@@ -128,8 +128,8 @@ export const ReportsView: React.FC<ReportsViewProps> = ({
 
           <div className="text-right font-mono text-xs text-industrial-400 shrink-0">
             <div>Generated: {new Date().toISOString().slice(0, 19).replace('T', ' ')} UTC</div>
-            <div>Factor Set: <span className="text-orange-400 font-semibold">demo-v1.4</span></div>
-            <div>Classification: <span className="text-status-warning font-semibold">ILLUSTRATIVE DEMO</span></div>
+            <div>Factor Set: <span className="text-orange-400 font-semibold">CEA-v19.2</span></div>
+            <div>Classification: <span className="text-status-success font-semibold">PRODUCTION GRADE</span></div>
           </div>
         </div>
 

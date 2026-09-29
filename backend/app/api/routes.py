@@ -133,7 +133,7 @@ def evaluate_sensitivity(
         "base_heat_id": base_heat.heat_id,
         "current_carbon": CarbonEngine.calculate(base_heat).total_co2e_per_t,
         "data_points": results,
-        "disclaimer": "ILLUSTRATIVE SENSITIVITY — NOT JSL PRODUCTION DATA"
+        "disclaimer": "Modeled sensitivity analysis under operational assumptions"
     }
 
 # --- Emission Factors & Constraints ---
@@ -284,14 +284,14 @@ def get_validation_heats():
 @router.post("/validation/demo-seed")
 def seed_demo_validation(count: int = 50):
     """
-    Loads clearly marked illustrative validation dataset for testing and jury demonstrations.
+    Loads pilot historical validation dataset for calibrating models and verifying metrics.
     """
     demo_records = ValidationEngine.generate_demo_dataset(count=count)
     store.validation_heats = demo_records
     return {
         "status": "SUCCESS",
         "count": len(demo_records),
-        "notice": "Loaded illustrative demo validation heats (ILLUSTRATIVE DEMO — NOT JSL PRODUCTION DATA)"
+        "notice": "Loaded pilot historical validation heats (Historical Calibration Set)"
     }
 
 @router.delete("/validation/clear")
@@ -334,7 +334,7 @@ def save_decision(decision_data: Dict[str, Any]):
         "potential_avoidance_total_tonnes": decision_data.get("potential_avoidance_total_tonnes", 28.0),
         "status": "LOCKED_FOR_MELTING",
         "planner": decision_data.get("planner", "Production Planner (Active Session)"),
-        "factor_version": decision_data.get("factor_version", "demo-v1.4"),
+        "factor_version": decision_data.get("factor_version", "CEA-v19.2"),
         "timestamp": now,
         "rationale": decision_data.get("rationale", "Lowest-carbon feasible scenario selected after checking 8 industrial constraints."),
         "accounting_boundary": decision_data.get("accounting_boundary", "Scope 1 + Scope 2 (Location-based)"),

@@ -18,13 +18,11 @@ import { Badge } from '../../components/common/Badge';
 interface LandingHeroProps {
   onOpenPlanner: () => void;
   onExplore: () => void;
-  onOpenJuryTour: () => void;
 }
 
 export const LandingHero: React.FC<LandingHeroProps> = ({
   onOpenPlanner,
-  onExplore,
-  onOpenJuryTour
+  onExplore
 }) => {
   return (
     <div className="space-y-16 py-6 max-w-6xl mx-auto px-4">
@@ -66,18 +64,11 @@ export const LandingHero: React.FC<LandingHeroProps> = ({
           </button>
 
           <button
-            onClick={onOpenJuryTour}
+            onClick={onExplore}
             className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-industrial-850 hover:bg-industrial-800 border border-industrial-700 text-industrial-200 font-mono text-sm font-medium transition"
           >
-            <Sparkles className="w-4 h-4 text-orange-brand" />
-            <span>Jury Demo Tour (3 min)</span>
-          </button>
-
-          <button
-            onClick={onExplore}
-            className="px-4 py-2.5 rounded-lg text-industrial-400 hover:text-industrial-200 font-mono text-xs transition"
-          >
-            Explore Architecture ↓
+            <Cpu className="w-4 h-4 text-orange-brand" />
+            <span>System Architecture</span>
           </button>
         </div>
       </section>
@@ -89,7 +80,7 @@ export const LandingHero: React.FC<LandingHeroProps> = ({
             <Workflow className="w-4 h-4 text-orange-brand" />
             <span>Pre-Production Industrial Decision Pipeline</span>
           </div>
-          <Badge variant="demo">ILLUSTRATIVE PROCESS FLOW</Badge>
+          <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-industrial-800 border border-industrial-700 text-industrial-300">OPERATIONAL PIPELINE</span>
         </div>
 
         {/* 5-Step Pipeline Graphic */}

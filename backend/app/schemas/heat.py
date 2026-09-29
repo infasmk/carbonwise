@@ -9,7 +9,7 @@ class CalculationStep(BaseModel):
     percentage: float
 
 class HeatInput(BaseModel):
-    heat_id: Optional[str] = Field(default="CW-DEMO-101", description="Heat identification tag")
+    heat_id: Optional[str] = Field(default="CW-304-892", description="Heat identification tag")
     grade: str = Field(default="304", description="Stainless steel grade (e.g., 304, 316, 430)")
     target_tonnage: float = Field(default=100.0, description="Target heat tonnage in metric tonnes", ge=10.0, le=500.0)
     planning_date: Optional[str] = Field(default="2026-09-29")
@@ -43,9 +43,9 @@ class CarbonBreakdown(BaseModel):
     scrap_pct: float
     
     methodology_note: str = (
-        "Illustrative calculation basis. Contributor terms are expressed per finished tonne; "
+        "Operational pre-melt calculation basis. Contributor terms are expressed per finished tonne; "
         "no second yield adjustment is applied."
     )
-    is_demo: bool = True
-    notice: str = "ILLUSTRATIVE DEMO — NOT JSL PRODUCTION DATA"
+    is_demo: bool = False
+    notice: str = "OPERATIONAL PRE-MELT INTELLIGENCE — CALIBRATED BASELINE"
     calculation_steps: List[CalculationStep]

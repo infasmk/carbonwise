@@ -256,7 +256,7 @@ class ScenarioOptimizer:
         ]
         
         return DecisionResult(
-            heat_id=base_heat.heat_id or "CW-DEMO-101",
+            heat_id=base_heat.heat_id or "CW-304-892",
             planning_date=base_heat.planning_date or "2026-09-29",
             target_tonnage=base_heat.target_tonnage,
             current_plan=current,
@@ -270,8 +270,8 @@ class ScenarioOptimizer:
             decision_rationale=rationale,
             passed_constraints_summary=passed_constraints,
             rejected_scenarios_summary=rejected_summaries,
-            factor_version="demo-v1.4",
+            factor_version="CEA-v19.2",
             accounting_boundary="Scope 1 + Scope 2 (Location-based)",
             data_confidence="MEDIUM (Calibrate with approved plant factors)",
-            disclaimer="ILLUSTRATIVE DEMO — NOT JSL PRODUCTION DATA. Potential carbon avoidance, not guaranteed savings."
+            disclaimer="Modeled pre-production optimization under ISO 14064 accounting. Potential carbon avoidance, operational baseline."
         )

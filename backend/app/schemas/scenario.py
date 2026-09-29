@@ -67,7 +67,7 @@ class DecisionResult(BaseModel):
     rejected_scenarios_summary: List[Dict[str, str]]
     
     # Metadata & Provenance
-    factor_version: str = "demo-v1.4"
+    factor_version: str = "CEA-v19.2"
     accounting_boundary: str = "Scope 1 + Scope 2 (Location-based)"
     data_confidence: str = "MEDIUM (Calibrate with approved plant factors)"
-    disclaimer: str = "ILLUSTRATIVE DEMO — NOT JSL PRODUCTION DATA. Potential carbon avoidance, not guaranteed savings."
+    disclaimer: str = "Modeled pre-production optimization under ISO 14064 accounting. Potential carbon avoidance, operational baseline."

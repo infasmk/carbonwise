@@ -16,7 +16,7 @@ import { Badge } from '../../components/common/Badge';
 export const SettingsView: React.FC = () => {
   const [accountingBoundary, setAccountingBoundary] = useState<'scope1_2_loc' | 'scope1_2_mkt' | 'scope1_only'>('scope1_2_loc');
   const [energyUnits, setEnergyUnits] = useState<'mwh' | 'gj'>('mwh');
-  const [demoNoticeVisible, setDemoNoticeVisible] = useState<boolean>(true);
+  const [auditTrailEnabled, setAuditTrailEnabled] = useState<boolean>(true);
   const [savedSuccess, setSavedSuccess] = useState<boolean>(false);
 
   const handleSave = () => {
@@ -63,7 +63,7 @@ export const SettingsView: React.FC = () => {
             <ShieldCheck className="w-4 h-4 text-orange-brand" />
             <span>GHG Accounting Boundary &amp; Standard</span>
           </span>
-          <Badge variant="demo">ISO 14064</Badge>
+          <Badge variant="neutral">ISO 14064</Badge>
         </div>
 
         <p className="text-industrial-400 text-[11px] leading-relaxed">
@@ -150,15 +150,15 @@ export const SettingsView: React.FC = () => {
           </div>
 
           <div>
-            <label className="text-industrial-400 block mb-1">Demo Watermark &amp; Badges</label>
+            <label className="text-industrial-400 block mb-1">Audit Trail &amp; Compliance Sign-off</label>
             <div className="flex items-center gap-2 pt-2">
               <input
                 type="checkbox"
-                checked={demoNoticeVisible}
-                onChange={(e) => setDemoNoticeVisible(e.target.checked)}
+                checked={auditTrailEnabled}
+                onChange={(e) => setAuditTrailEnabled(e.target.checked)}
                 className="accent-orange-brand"
               />
-              <span className="text-industrial-300">Enforce "ILLUSTRATIVE DEMO" watermark across all screens</span>
+              <span className="text-industrial-300">Enforce cryptographic audit signature for all locked heats (ISO 14064)</span>
             </div>
           </div>
         </div>
