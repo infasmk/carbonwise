@@ -13,7 +13,7 @@ import {
   DecisionRecord
 } from '../types';
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api';
+const API_BASE = import.meta.env.VITE_API_URL || (typeof window !== 'undefined' ? '/api' : 'http://127.0.0.1:8000/api');
 
 // --- Client-side fallback implementations for resilient offline operation ---
 

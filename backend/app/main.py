@@ -11,8 +11,9 @@ app = FastAPI(
         "and identifies the lowest-carbon feasible scenario before the melt."
     ),
     version="1.0.0",
-    docs_url="/docs",
-    redoc_url="/redoc"
+    docs_url="/api/docs",
+    openapi_url="/api/openapi.json",
+    redoc_url="/api/redoc"
 )
 
 # CORS configuration
